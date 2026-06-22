@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-eks-2048
+spec:
+  type: ClusterIP
+  selector:
+    app: simple-eks-2048
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+    # port: 80 is the port the Service itself listens on inside the cluster. 
+    # targetPort: 80 is the port on the actual pod/container to forward to. 
+    # They happen to be the same number here, but they don't have to be

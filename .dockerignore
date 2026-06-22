@@ -1,0 +1,5 @@
+terraform/
+.github/
+k8s/
+*.md
+.git
